@@ -379,6 +379,12 @@ data_produk_olahan = pd.DataFrame([
         "file": "Produk/Bubuk4.png",
         "Program": "Ruteng",
         "tanggal": "2025-02-15"
+    },
+    {
+        "caption": "Sambal Crispy",
+        "file": "Produk/Sambal Crispy.png",
+        "Program": "Giripurno",
+        "tanggal": "2025-02-15"
     }
 ])
 
