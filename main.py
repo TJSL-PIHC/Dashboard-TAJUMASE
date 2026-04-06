@@ -336,7 +336,7 @@ wilayah_df = df_filtered.groupby("Wilayah", as_index=False).agg({
     "Pupuk Phonska":"sum",
     "Pupuk Nitrea":"sum",
     "Pupuk Urea":"sum",
-    "Pupuk NPK":"sum"
+    "Pupuk NPK":"sum",
 })
 
 st.dataframe(
