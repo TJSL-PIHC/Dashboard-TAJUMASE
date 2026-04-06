@@ -198,7 +198,7 @@ produktivitas = total_panen / luas_lahan if luas_lahan != 0 else 0
 
 k1, k2, k3, k4 = st.columns(4)
 
-k1.metric("Anggaran", f"Rp {anggaran:,.0f}")
+k1.metric("Realisasi Anggaran", f"Rp {anggaran:,.0f}")
 k2.metric("Total Panen", f"{total_panen:,.0f} Kg")
 k3.metric("Luas Lahan", f"{luas_lahan:.1f} Ha")
 k4.metric("Produktivitas", f"{produktivitas:.1f} Kg/Ha")
