@@ -319,8 +319,9 @@ with c3:
     )
 
     st.plotly_chart(fig_compare, use_container_width=True)
+    
 # ======================
-# WILAYAH
+# Distribusi Wilayah Desa
 # ======================
 st.markdown("""
 <h3 style font-weight: 800; text-transform: uppercase; margin-bottom: 10px;'>
@@ -334,7 +335,8 @@ wilayah_df = df_filtered.groupby("Wilayah", as_index=False).agg({
     "Luas_Lahan":"sum",
     "Pupuk Phonska":"sum",
     "Pupuk Nitrea":"sum",
-    "Pupuk Urea":"sum"
+    "Pupuk Urea":"sum",
+    "Pupuk NPK":"sum"
 })
 
 st.dataframe(
@@ -345,7 +347,8 @@ st.dataframe(
         "Luas_Lahan": "LUAS LAHAN (Ha)",
         "Pupuk Phonska": "PUPUK PHONSKA (Kg)",
         "Pupuk Nitrea": "PUPUK NITREA (Kg)",
-        "Pupuk Urea": "PUPUK UREA (Kg)"
+        "Pupuk Urea": "PUPUK UREA (Kg)",
+        "Pupuk NPK": "PUPUK NPK (Kg)"
     }).style.format({
         "LUAS LAHAN (Ha)": "{:,.2f}",
     }).set_properties(**{
