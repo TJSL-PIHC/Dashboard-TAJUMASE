@@ -346,7 +346,9 @@ st.dataframe(
         "Pupuk Phonska": "PUPUK PHONSKA (Kg)",
         "Pupuk Nitrea": "PUPUK NITREA (Kg)",
         "Pupuk Urea": "PUPUK UREA (Kg)"
-    }).style.set_properties(**{
+    }).style.format({
+        "LUAS LAHAN (Ha)": "{:,.2f}"
+    }).set_properties(**{
         'text-align': 'center',
         'font-weight': '500'
     }).set_table_styles([
@@ -358,7 +360,6 @@ st.dataframe(
     height=220,
     use_container_width=True,
     hide_index=True
-)
 
 # ======================
 # PRODUK OLAHAN (SWIPE VERSION - FILTER PROGRAM + TAHUN)
