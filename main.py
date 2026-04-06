@@ -868,33 +868,27 @@ st.markdown("## Dokumentasi")
 data_dokumentasi = pd.DataFrame([
     {
         "caption": "Panen Wilayah A",
-        "file": "Dokumentasi/contoh 1.png",
+        "file": "Dokumentasi/Contoh 1.png",
         "Program": "Lembata",
         "tanggal": "2025-01-12"
     },
     {
-        "file": "Dokumentasi/contoh 2.png",
+        "file": "Dokumentasi/Contoh 2.png",
         "Program": "Lembata",
         "tanggal": "2025-02-15",
         "caption": "Distribusi Hasil"
     },
     {
-        "file": "Dokumentasi/contoh 4.png",
+        "file": "Dokumentasi/Contoh 5.png",
         "Program": "Ruteng",
         "tanggal": "2025-03-20",
         "caption": "Aktivitas Petani"
     },
     {
-        "file": "Dokumentasi/Contoh 5.png",
+        "file": "Dokumentasi/Contoh 6.png",
         "Program": "Sulteng",
         "tanggal": "2025-01-12",
         "caption": "Petani Sulteng"
-    },
-    {
-        "file": "Dokumentasi/Contoh 6.png",
-        "Program": "Giripurno",
-        "tanggal": "2025-04-15",
-        "caption": "Giripurno Farm"
     },
     {
         "file": "Dokumentasi/Contoh 7.png",
