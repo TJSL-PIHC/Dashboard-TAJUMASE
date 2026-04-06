@@ -370,13 +370,13 @@ st.markdown("## PRODUK OLAHAN")
 data_produk_olahan = pd.DataFrame([
     {
         "caption": "Sabun Olahan",
-        "file": "Dokumentasi/Sabun4.png",
+        "file": "Produk/Sabun4.png",
         "Program": "Lembata",
         "tanggal": "2025-01-12"
     },
     {
         "caption": "Bubuk Olahan",
-        "file": "Dokumentasi/Bubuk4.png",
+        "file": "Produk/Bubuk4.png",
         "Program": "Ruteng",
         "tanggal": "2025-02-15"
     }
@@ -675,15 +675,15 @@ st.markdown("## PUPUK")
 data_pupuk = pd.DataFrame([
     {
         "caption": "Pupuk Phonska",
-        "file": "Dokumentasi/Pupuk1.png"
+        "file": "Pupuk/Pupuk1.png"
     },
     {
-        "caption": "Pupuk Urea",
-        "file": "Dokumentasi/Pupuk2.png"
+        "caption": "Pupuk Kokoa",
+        "file": "Pupuk/Pupuk2.png"
     },
     {
-        "caption": "Pupuk Nitrea",
-        "file": "Dokumentasi/Pupuk3.png"
+        "caption": "Pupuk Phonska +",
+        "file": "Pupuk/Pupuk3.png"
     }
 ])
 
