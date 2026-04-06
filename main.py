@@ -224,7 +224,7 @@ with c1:
         bulanan,
         x="Bulan",
         y="Produksi",
-        color_discrete_sequence=["#8da98d"],
+        color_discrete_sequence=["#8da98d","#ffffff"],
         category_orders={"Bulan": bulan_order}  
     )
 
