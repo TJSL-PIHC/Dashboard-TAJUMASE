@@ -43,7 +43,7 @@ st.markdown(f"""
     content: '';
     position: fixed;
     inset: 0;
-    background: rgba(230, 239, 233, 0.70);
+    background: rgba(230, 239, 233, 0.20);
     pointer-events: none;
     z-index: 0;
 }}
@@ -224,7 +224,7 @@ with c1:
         bulanan,
         x="Bulan",
         y="Produksi",
-        color_discrete_sequence=["#8da98d","#ffffff"],
+        color_discrete_sequence=["#8da98d"],
         category_orders={"Bulan": bulan_order}  
     )
 
