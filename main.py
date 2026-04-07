@@ -8,9 +8,7 @@ import streamlit.components.v1 as components
 # CONFIG
 st.set_page_config(page_title="TAJUMASE", layout="wide")
 
-# ======================
-# 🎨 SAGE THEME STYLE
-# ======================
+# Section Background
 def image_to_base64_local(image_path):
     path = Path(image_path)
     if not path.exists():
@@ -115,19 +113,17 @@ div[data-testid="column"] > div:has(div[data-testid="stPlotlyChart"]) {{
 </style>
 """, unsafe_allow_html=True)
 
-# ======================
-# LOAD DATA
-# ======================
+#Section Load Data
 df = pd.read_excel("data_panen_dummy.xlsx")
 
 # ======================
-# LOAD LOGO
+# Section LOAD LOGO
 # ======================
 logo_path = "logo.png"  # ← Ganti sesuai nama file logo kamu
 logo_b64 = image_to_base64_local(logo_path)
 
 # ======================
-# HEADER + FILTER
+# Section #1 HEADER + FILTER
 # ======================
 col1, col2, col3, col4 = st.columns([2,1,1,1])
 
@@ -167,7 +163,7 @@ if tahun != "Semua Tahun":
 df_doc = df_filtered.copy()
 
 # ======================
-# SIMPAN DATA UNTUK PERBANDINGAN (PENTING)
+# SIMPAN DATA UNTUK PERBANDINGAN 
 # ======================
 df_compare = df_filtered.copy()
 
@@ -189,7 +185,7 @@ if df_filtered.empty:
     st.stop()
 
 # ======================
-# KPI
+# Section #2 KPI
 # ======================
 total_panen = df_filtered["Produksi"].sum()
 anggaran = df_filtered["Anggaran"].sum()
@@ -204,7 +200,7 @@ k3.metric("Luas Lahan", f"{luas_lahan:.1f} Ha")
 k4.metric("Produktivitas", f"{produktivitas:.1f} Kg/Ha")
 
 # ======================
-# CHART ROW
+# Section #3 CHART ROW
 # ======================
 c1, c2, c3 = st.columns(3)
 
@@ -249,7 +245,7 @@ with c1:
 
     st.plotly_chart(fig_bar, use_container_width=True)
 
-# ===== PIE (tidak ikut filter komoditas) =====
+# PIE Chart
 with c2:
     st.subheader("Komposisi Komoditas (%)")
 
@@ -285,7 +281,7 @@ with c2:
 
     st.plotly_chart(fig_pie, use_container_width=True)
 
-# ===== PERBANDINGAN (tidak ikut filter komoditas) =====
+# Chart Pembanding
 with c3:
     st.subheader("Perbandingan Komoditas (Kg)")
 
@@ -321,7 +317,7 @@ with c3:
     st.plotly_chart(fig_compare, use_container_width=True)
     
 # ======================
-# Distribusi Wilayah Desa
+# Section #4 Distribusi Wilayah Desa
 # ======================
 st.markdown("""
 <h3 style font-weight: 800; text-transform: uppercase; margin-bottom: 10px;'>
@@ -366,7 +362,7 @@ st.dataframe(
 )
 
 # ======================
-# PRODUK OLAHAN (SWIPE VERSION - FILTER PROGRAM + TAHUN)
+# Section #5 PRODUK OLAHAN
 # ======================
 st.markdown("## PRODUK OLAHAN")
 
@@ -574,7 +570,7 @@ else:
 
 
 # ======================
-# CHART PRODUK OLAHAN
+# Section #6 CHART PRODUK OLAHAN
 # ======================
 # tampil HANYA kalau Program dan Tahun dipilih spesifik
 if program == "Semua Program" or tahun == "Semua Tahun":
@@ -676,7 +672,7 @@ else:
 
 
 # ======================
-# PUPUK (SWIPE VERSION - NO FILTER)
+# Section #7 PUPUK 
 # ======================
 st.markdown("## PUPUK")
 
@@ -869,7 +865,7 @@ else:
         components.html(pupuk_html, height=460)
 
 # ======================
-# DOKUMENTASI (SWIPE VERSION)
+# Section #8 DOKUMENTASI (SWIPE VERSION)
 # ======================
 st.markdown("## Dokumentasi")
 
