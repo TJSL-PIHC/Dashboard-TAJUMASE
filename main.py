@@ -683,7 +683,7 @@ data_pupuk = pd.DataFrame([
         "file": "Pupuk/Pupuk1.png"
     },
     {
-        "caption": "Pupuk Kokoa",
+        "caption": "Pupuk Kakao",
         "file": "Pupuk/Pupuk2.png"
     },
     {
